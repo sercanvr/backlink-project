@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-image: url('Bg-2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+h1 {
+  color: rgb(49, 49, 49);
+  text-align: center;
+  margin: 20px auto;
+  width: 300px;
+  padding: 20px;
+  border-radius: 9px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h1:hover {
+  transition: all .5s;
+  box-shadow: none;
+}
+
+h3 {
+  margin-right: 190px;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(49, 49, 49);
+  border-radius: 9px 9px 0px 0px;
+  background: rgba(255,255,255,0.55);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.modal {
+  color: rgb(49, 49, 49);
+  width: 500px;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  animation: modalopen 1s;
+}
+
+@keyframes modalopen{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.show-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.form-group {
+  height: 50px;
+}
+
+.form-label {
+  font-weight: 900;
+}
+
+.form-input {
+  width: 100%;
+  padding: 3px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #0f72e2;
+}
+
+button {
+  color: #131313;
+  height: 25px;
+  width: 80px;
+  background-color: #e9e9e9;
+  border-radius: 7px;
+  border: none;
+  margin-top: 10px;
+}
+
+button:hover {
+  color: white;
+  background-color: #0f72e2;
+  cursor: pointer;
+}
+
+button:focus {
+  color: white;
+  background-color: #065cbe;
+}
+
+
+/* Window Buttons */
+#icons {
+  margin-left: 10px;
+}
+
+.fa-circle {
+  padding: 3px;
+}
+
+.closeBtn {
+  color: #fe5d55;
+}
+
+.closeBtn:hover {
+  color: #ee382f;
+  cursor: pointer;
+}
+
+.minimizeBtn {
+  color: #febb2e;
+}
+
+.minimizeBtn:hover {
+  color: #da9a12;
+  cursor: pointer;
+}
+
+.maximizeBtn {
+  color: #29c63e;
+}
+
+.maximizeBtn:hover {
+  color: #19a52c;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.item {
+  text-align: left;
+  min-width: 200px;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+a {
+  color: rgb(49, 49, 49);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: .7;
+  transition: all .3s;
+  color: white;
+}
+
+.custom-circle {
+  position: relative;
+  color: transparent;
+  background-color: #fe5d55;
+  width: 16px;
+  height: 16px;
+  right: 13px;
+  bottom: 12px;
+  border-radius: 50%;
+}
+
+.custom-circle:hover {
+  background-color: #ee382f;
+  cursor: pointer;
+}
+
+.name {
+  margin-top: 20px;
+}
+
+
+
+
+
+/* Mobile Design */
+@media (max-width:768px) {
+  body{
+    overflow-y: auto;
+  }
+
+  h3 {
+    margin-right: 120px;
+  }
+
+  .modal {
+    border-radius: 0px;
+  }
+  
+  .modal-header {
+    border-radius: 0px;
+  }
+  
+  .form-group {
+    height: 60px;
+  }
+
+  .form-input {
+    margin-top: 5px;
+  }
+
+  .item {
+    width: 80%;
+    margin: 15px auto;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+}

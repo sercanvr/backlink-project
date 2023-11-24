@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32"  href="favicon-32x32.png">
+    <title>Backlink App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <h1 id="show-modal">Add Backlink</h1>
+
+    <div class="container" id="backlinks-container"></div>
+
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <div class="modal-header">
+                <div id="icons">
+                    <i class="fa-solid fa-circle closeBtn" id="close-modal"></i>
+                    <i class="fa-solid fa-circle minimizeBtn"></i>
+                    <i class="fa-solid fa-circle maximizeBtn"></i>
+                </div>
+                <h3>Add Backlink</h3>
+            </div>
+            <div class="modal-content">
+                <form id="backlink-form">
+                    <div class="form-group">
+                        <label class="form-label">Website Name</label>
+                        <input class="form-input" id="website-name" type="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Website Address</label>
+                        <input class="form-input" id="website-url" type="text">
+                    </div>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script src="backlink.js"></script>
+</body>
+</html>
